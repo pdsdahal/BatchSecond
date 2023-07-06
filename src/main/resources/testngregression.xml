@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="bootcampautomation" verbose="1">
+
+<listeners>
+	<listener class-name="com.lambdatest.extentreport.ExtentReportListner"></listener>
+</listeners>
+
+
+	<test name="webautomation">
+		<classes>
+
+			<class name="com.lambdatest.tests.HeaderPageTest">
+
+				<methods>
+					<include name="VerifyAllTheHeaderWebElementArePresent" />
+					<include name="validateMouseHoverOverMyAccountMenu" />
+				</methods>
+
+			</class>
+
+
+			<class name="com.lambdatest.tests.RegistrationPageTest">
+
+				<methods>
+					<include name="verifyAllTheWebElementsAreDisplay" />
+					<include name="verifyRegisterWithoutEnteringAnyValues" />
+				</methods>
+
+			</class>
+
+		</classes>
+	</test>
+</suite>
